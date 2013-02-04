@@ -1,0 +1,198 @@
+/* no daytype */
+" " = " ";
+
+/* No comment provided by engineer. */
+" %@ o'clock" = " %@ 時";
+
+/* No comment provided by engineer. */
+"%@ <%@>" = "%1$@ <%2$@>";
+
+/* No comment provided by engineer. */
+"%@ o'clock" = "%@ 時";
+
+/* No comment provided by engineer. */
+"%@:%@:%@" = "%1$@:%2$@:%3$@";
+
+/* No comment provided by engineer. */
+"%@:%@:%@" = "%1$@:%2$@:%3$@";
+
+/* No comment provided by engineer. */
+"%@ -> %@" = "%1$@ ▸ %2$@";
+
+/* No comment provided by engineer. */
+"A" = "A";
+
+/* No comment provided by engineer. */
+"About" = "Ride on Timeについて";
+
+/* No comment provided by engineer. */
+"About This App" = "このアプリについて";
+
+/* No comment provided by engineer. */
+"B" = "B";
+
+/* No comment provided by engineer. */
+"Back" = "戻る";
+
+/* No comment provided by engineer. */
+"Cancel" = "キャンセル";
+
+/* No comment provided by engineer. */
+"Connection Failed" = "接続失敗";
+
+/* No comment provided by engineer. */
+"DayType" = "DayType";
+
+/* No comment provided by engineer. */
+"Toretabi Web" = "トレたび";
+
+/* No comment provided by engineer. */
+"Done" = "完了";
+
+/* No comment provided by engineer. */
+"Edit" = "編集";
+
+/* No comment provided by engineer. */
+"Ekitan Search" = "駅探 駅名検索";
+
+/* No comment provided by engineer. */
+"Ekitan Web" = "駅探";
+
+/* No comment provided by engineer. */
+"Everyday" = "全日";
+
+/* No comment provided by engineer. */
+"Help" = "ヘルプ";
+
+/* No comment provided by engineer. */
+"here" = "出発地";
+
+/* No comment provided by engineer. */
+"Holiday" = "休日";
+
+/* No comment provided by engineer. */
+"No Internet Connection..." = "インターネット接続環境がありません";
+
+/* No comment provided by engineer. */
+"No Selection" = "選択なし";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Online Timetables" = "ネット時刻表";
+
+/* No comment provided by engineer. */
+"Please Wait..." = "しばらくお待ちください...";
+
+/* No comment provided by engineer. */
+"Saturday" = "土曜";
+
+/* No comment provided by engineer. */
+"Save" = "保存";
+
+/* No comment provided by engineer. */
+"Select Timetable 1" = "時刻表１選択";
+
+/* No comment provided by engineer. */
+"Select Timetable 2" = "時刻表２選択";
+
+/* No comment provided by engineer. */
+"Set A" = "セットＡ";
+
+/* No comment provided by engineer. */
+"Set B" = "セットＢ";
+
+/* No comment provided by engineer. */
+"Settings" = "設定";
+
+/* No comment provided by engineer. */
+"Thankyou for & powered by駅探" = "Thankyou for & powered by駅探";
+
+/* No comment provided by engineer. */
+"there" = "目的地";
+
+/* No comment provided by engineer. */
+"This Timetable was recorded." = "この時刻表を記録しました";
+
+/* No comment provided by engineer. */
+"Timetable List" = "時刻表一覧";
+
+/* No comment provided by engineer. */
+"Timetables" = "時刻表";
+
+/* No comment provided by engineer. */
+"via" = "ルート";
+
+/* No comment provided by engineer. */
+"Weekday" = "平日";
+
+/* No comment provided by engineer. */
+"Yahoo Transit Web" = "Yahooトランジット";
+
+/* No comment provided by engineer. */
+"エラー画面" = "エラー画面";
+
+/* No comment provided by engineer. */
+"休日 %@ 時" = "休日 %@ 時";
+
+/* No comment provided by engineer. */
+"各駅停車" = "各駅停車";
+
+/* No comment provided by engineer. */
+"土曜 %@ 時" = "土曜 %@ 時";
+
+/* No comment provided by engineer. */
+"平日 %@ 時" = "平日 %@ 時";
+
+/* No comment provided by engineer. */
+"方面" = "方面";
+
+/* No comment provided by engineer. */
+"時刻" = "時刻";
+
+/* No comment provided by engineer. */
+"時刻表検索結果" = "時刻表検索結果";
+
+/* No comment provided by engineer. */
+"普通" = "普通";
+
+/* No comment provided by engineer. */
+"路線・方面選択" = "路線・方面選択";
+
+/* No comment provided by engineer. */
+"駅名選択" = "駅名選択";
+
+/* No comment provided by engineer. */
+"From:" = "出発地:";
+
+/* No comment provided by engineer. */
+"Route:" = "経路:";
+
+/* No comment provided by engineer. */
+"To:" = "目的地:";
+
+/* No comment provided by engineer. */
+"DayType:" = "曜日:";
+
+/* No comment provided by engineer. */
+"W" = "平";
+
+/* No comment provided by engineer. */
+"S" = "土";
+
+/* No comment provided by engineer. */
+"H" = "休";
+
+/* No comment provided by engineer. */
+"E" = "全";
+
+/* No comment provided by engineer. */
+"You can edit this timetable in Editing Mode. Lets Try to tap [Edit] Button. Also you can cancel anything you change before tap [Done] Button, by tap [Cancel] Button." = "[編集]ボタンで編集モードに入ると，時刻の入力・編集をすることができます。また，[完了]ボタンを押す前であれば，[キャンセル]ボタンで入力・編集結果を破棄することができます。";
+
+/* No comment provided by engineer. */
+"Usage" = "使い方";
+
+/* No comment provided by engineer. */
+"Thankyou!" = "ありがとうございます！";
+

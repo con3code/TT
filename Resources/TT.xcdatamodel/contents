@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Day" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="fri" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hol" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mon" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sat" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="specific" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sun" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="thu" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="tue" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="wed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="Specificdays" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Specificday" inverseName="Day" inverseEntity="Specificday" indexed="YES" syncable="YES"/>
+        <relationship name="Table" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Table" inverseName="Day" inverseEntity="Table" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Description" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sign" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="Table" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Table" inverseName="Descriptions" inverseEntity="Table" indexed="YES" syncable="YES"/>
+        <relationship name="Times" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Time" inverseName="Descriptions" inverseEntity="Time" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Folder" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="folderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="Tables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Table" inverseName="Folder" inverseEntity="Table" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Interval" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextInterval" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prevInterval" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="Station" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="Intervals" inverseEntity="Station" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Line" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lineNum" optional="YES" attributeType="String" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="Stations" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Station" inverseName="Line" inverseEntity="Station" indexed="YES" syncable="YES"/>
+        <relationship name="Tables" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Table" inverseName="thisLine" inverseEntity="Table" indexed="YES" syncable="YES"/>
+        <relationship name="Vehicles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Vehicle" inverseName="Line" inverseEntity="Vehicle" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Specificday" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isHol" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="startdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="Day" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="Specificdays" inverseEntity="Day" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Station" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupCode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="location_lat" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="location_lon" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameKana" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prefecture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefectureCode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sfcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stationNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="Intervals" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Interval" inverseName="Station" inverseEntity="Interval" indexed="YES" syncable="YES"/>
+        <relationship name="Line" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Line" inverseName="Stations" inverseEntity="Line" indexed="YES" syncable="YES"/>
+        <relationship name="nextStation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="prevStation" inverseEntity="Station" indexed="YES" syncable="YES"/>
+        <relationship name="prevStation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Station" inverseName="nextStation" inverseEntity="Station" indexed="YES" syncable="YES"/>
+        <relationship name="Table" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Table" inverseName="thisStation" inverseEntity="Table" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Table" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="daytype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="direction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="startinghour" optional="YES" attributeType="Integer 32" defaultValueString="4" syncable="YES"/>
+        <attribute name="tableNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tableType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="vehicletype" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="Day" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Day" inverseName="Table" inverseEntity="Day" indexed="YES" syncable="YES"/>
+        <relationship name="Descriptions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Description" inverseName="Table" inverseEntity="Description" indexed="YES" syncable="YES"/>
+        <relationship name="destStation" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Station" indexed="YES" syncable="YES"/>
+        <relationship name="destTime" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Time" indexed="YES" syncable="YES"/>
+        <relationship name="Folder" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Folder" inverseName="Tables" inverseEntity="Folder" indexed="YES" syncable="YES"/>
+        <relationship name="thisLine" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Line" inverseName="Tables" inverseEntity="Line" indexed="YES" syncable="YES"/>
+        <relationship name="thisStation" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Station" inverseName="Table" inverseEntity="Station" indexed="YES" syncable="YES"/>
+        <relationship name="Times" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Time" inverseName="Table" inverseEntity="Time" indexed="YES" syncable="YES"/>
+        <relationship name="Vehicles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Vehicle" inverseName="Table" inverseEntity="Vehicle" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Time" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="arr_hour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="arr_minute" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="arr_unihour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dep_hour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dep_minute" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dep_unihour" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isArrive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stationOrderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="Descriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Description" inverseName="Times" inverseEntity="Description" indexed="YES" syncable="YES"/>
+        <relationship name="Table" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Table" inverseName="Times" inverseEntity="Table" indexed="YES" syncable="YES"/>
+        <relationship name="thisVehicle" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Vehicle" inverseName="Times" inverseEntity="Vehicle" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="NSManagedObject" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descript" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleNo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="Line" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Line" inverseName="Vehicles" inverseEntity="Line" indexed="YES" syncable="YES"/>
+        <relationship name="Table" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Table" inverseName="Vehicles" inverseEntity="Table" indexed="YES" syncable="YES"/>
+        <relationship name="Times" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Time" inverseName="thisVehicle" inverseEntity="Time" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Time" positionX="648" positionY="252" width="128" height="240"/>
+        <element name="Folder" positionX="27" positionY="18" width="128" height="120"/>
+        <element name="Description" positionX="718" positionY="576" width="128" height="135"/>
+        <element name="Specificday" positionX="666" positionY="18" width="128" height="135"/>
+        <element name="Interval" positionX="90" positionY="876" width="128" height="105"/>
+        <element name="Line" positionX="27" positionY="237" width="128" height="150"/>
+        <element name="Station" positionX="72" positionY="504" width="128" height="300"/>
+        <element name="Table" positionX="288" positionY="72" width="128" height="330"/>
+        <element name="Vehicle" positionX="306" positionY="504" width="128" height="210"/>
+        <element name="Day" positionX="504" positionY="18" width="128" height="210"/>
+    </elements>
+</model>
